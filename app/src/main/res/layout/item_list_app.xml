@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/margin_tiny">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:gravity="center"
+        android:paddingTop="@dimen/margin_super_tiny">
+
+        <TextView
+            android:id="@+id/text_list_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="App"
+            android:textColor="@color/main_green"
+            android:textSize="@dimen/text_size_default" />
+
+
+        <TextView
+            android:id="@+id/tv_list_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/text_list_app"
+            android:text=" Sale"
+            android:textSize="@dimen/text_size_default" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="@dimen/width_small"
+        android:layout_height="@dimen/height_line_view_big"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_super_tiny"
+        android:background="@color/main_green" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_list_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="@dimen/loading_size"
+            android:layout_height="@dimen/loading_size"
+            android:layout_gravity="center" />
+
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_see_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@drawable/bg_green_border_selector"
+        android:drawablePadding="@dimen/margin_tiny"
+        android:drawableRight="@drawable/ic_right_white_15dp"
+        android:gravity="center"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:paddingBottom="@dimen/margin_tiny"
+        android:paddingLeft="@dimen/margin_default"
+        android:paddingRight="@dimen/margin_small"
+        android:paddingTop="@dimen/margin_tiny"
+        android:text="@string/see_more"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_super_tiny" />
+</LinearLayout>

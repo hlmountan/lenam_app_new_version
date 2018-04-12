@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.paditech.mvpbase.common.view.TranslationNestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager_home"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/home_page_height"
+                android:layout_alignParentTop="true" />
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/indicator_height"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="@dimen/margin_small" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+        <LinearLayout
+            android:id="@+id/linearlauout_home"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_size"
+            android:background="@color/white"
+            android:orientation="vertical"></LinearLayout>
+    </LinearLayout>
+
+
+</com.paditech.mvpbase.common.view.TranslationNestedScrollView>

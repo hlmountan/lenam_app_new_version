@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="lib.kingja.switchbutton:switchbutton-1.1.6">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/c299fcacfa17b4767f68c6f8f61bca0130880352/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/c299fcacfa17b4767f68c6f8f61bca0130880352/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/lib.kingja.switchbutton/switchbutton/1.1.6/6eae835061a3700fb7da182e37d616b838d10f1c/switchbutton-1.1.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

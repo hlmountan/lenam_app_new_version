@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">MVPBase</string>
+    <!--permission-->
+    <string name="mess_permission_storage">Bạn có muốn cho phép ứng dụng này sử dụng bộ nhớ không?</string>
+    <string name="mess_permission_camera">Bạn có muốn cho phép ứng dụng này sử dụng camera không?</string>
+    <string name="mess_permission_location">Bạn có muốn cho phép ứng dụng này truy cập vị trí của bạn không?</string>
+
+    <!--Action-->
+    <string name="refresh">Tải lại</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Hủy</string>
+    <string name="see_more">See more</string>
+
+    <!--Select multi photos-->
+    <string name="select_multi_photo">Select photos</string>
+    <string name="select_image">Chọn ảnh</string>
+    <string name="pick_image">Chọn từ thư viện</string>
+    <string name="capture_image">Chụp ảnh</string>
+
+
+    <!--Main-->
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <!--Message -->
+    <string name="mess_no_connect">Không có kết nối mạng.</string>
+    <string name="notice">Thông báo</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_category">Category</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_manage_apk">Apk</string>
+    <string name="title_search">Search</string>
+    <string name="title_activity_menu_navigation">ActivityMenuNavigation</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="download_apk">Download Apk</string>
+</resources>

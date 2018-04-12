@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_screen_shot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_middle">
+<FrameLayout
+    android:id="@+id/frame_screen_short"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v4.view.ViewPager>
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/indicator_height"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/margin_small"
+        ></me.relex.circleindicator.CircleIndicator>
+
+</FrameLayout>
+   <Button
+       android:id="@+id/btn_back"
+       android:layout_width="@dimen/width_nav_icon"
+       android:layout_height="@dimen/height_nav_icon"
+       android:background="@drawable/arrow_back"/>
+
+</RelativeLayout>

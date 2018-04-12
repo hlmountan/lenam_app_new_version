@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\hung\.android\build-cache\cb0628e05c9afb4c54856e478c3888acb2ff1318\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.2"
+        sha1="461929440e66685425a298693507f6fb27b0a872">
+        <dex dex="C:\Users\hung\Documents\GitHub\lenam_app\app\build\intermediates\transforms\dex\envReal\debug\folders\1000\10\classes_ee81ba96de89b9e9e4e090d3f4e95ab22c5c2b9f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hung\.android\build-cache\0dff692029114aa9bada180ce016113a96e2bed6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.2"
+        sha1="204f607419af8247cc1b2a61f50663c65f841c12">
+        <dex dex="C:\Users\hung\Documents\GitHub\lenam_app\app\build\intermediates\transforms\dex\envReal\debug\folders\1000\10\classes_4f2568b1b7a71ce48563ea041909cfc0d98dbdbd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hung\.android\build-cache\80b35ccf26a2dfc7970cbd5610b1eaa251c142a3\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.2"
+        sha1="7045152f3bd1870740b9bcb1cddff495e189774e">
+        <dex dex="C:\Users\hung\Documents\GitHub\lenam_app\app\build\intermediates\transforms\dex\envReal\debug\folders\1000\10\classes_e03d29610aa9f7ba6583895e86b78670c8505fd6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hung\.android\build-cache\527c738d63f9203fa5f589f42bca5a91625ca8ac\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.2"
+        sha1="646439081688c43e04ec4aa7ba6915ddfdcc337f">
+        <dex dex="C:\Users\hung\Documents\GitHub\lenam_app\app\build\intermediates\transforms\dex\envReal\debug\folders\1000\10\classes_938d3933c6e8acd1c10def71421ab340f7af8777\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hung\.android\build-cache\574a21bbd061a7dbb1ccb3752b50ac693ecb8415\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.2"
+        sha1="005d20a198159b87f65812fc5c51b2d84c5eba0a">
+        <dex dex="C:\Users\hung\Documents\GitHub\lenam_app\app\build\intermediates\transforms\dex\envReal\debug\folders\1000\10\classes_5e9abc429dd60c201ec4c0a56b6cd943f4ca8dc8\classes.dex" />
+    </item>
+
+</items>
