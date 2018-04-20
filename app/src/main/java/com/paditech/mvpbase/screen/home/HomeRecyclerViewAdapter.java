@@ -2,12 +2,14 @@ package com.paditech.mvpbase.screen.home;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -19,14 +21,38 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import com.paditech.mvpbase.common.utils.ImageUtil;
+import com.paditech.mvpbase.screen.detail.DetailActivity;
 import com.paditech.mvpbase.screen.showMoreApp.ShowMoreActicity;
+
+import org.greenrobot.eventbus.EventBus;
 
 /**
  * Created by hung on 1/3/2018.
  */
 
 public class HomeRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    List<AppModel> mList1, mList2, mList3, mList4;
+    List<AppModel> mList1;
+    private int itemNumber;
+    private int itemId;
+
+    public int getItemId() {
+        return itemId;
+    }
+
+    public void setItemId(int itemId) {
+        this.itemId = itemId;
+        notifyDataSetChanged();
+    }
+
+    public int getItemNumber() {
+        return itemNumber;
+    }
+
+    public void setItemNumber(int itemNumber) {
+        this.itemNumber = itemNumber;
+    }
+
     Activity act;
 
     public HomeRecyclerViewAdapter(Activity act){
@@ -37,24 +63,9 @@ public class HomeRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
         notifyDataSetChanged();
     }
 
-    public void setmList2(List<AppModel> mList2) {
-        this.mList2 = mList2;
-        notifyDataSetChanged();
-    }
-
-    public void setmList3(List<AppModel> mList3) {
-        this.mList3 = mList3;
-        notifyDataSetChanged();
-    }
-
-    public void setmList4(List<AppModel> mList4) {
-        this.mList4 = mList4;
-        notifyDataSetChanged();
-    }
-
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_app, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(getItemId(), parent, false);
         return new RecyclerHolder(view);
     }
 
@@ -66,88 +77,59 @@ public class HomeRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
 
     @Override
     public int getItemCount() {
-        return 4;
+        if (mList1 != null) {
+            return mList1.size();
+        } else {
+            return 0 ;
+        }
     }
 
     public class RecyclerHolder extends RecyclerView.ViewHolder {
 
-        @BindView(R.id.text_list_app)
-        TextView textView_list_app;
-        @BindView(R.id.tv_list_end)
-        TextView textView_list_end;
-        @BindView(R.id.btn_see_more)
-        Button button_see_more;
-        @BindView(R.id.recycler_view_list_app)
-        RecyclerView recyclerView;
-        @BindView(R.id.progressBar)
-        ProgressBar progressBar;
+        @BindView(R.id.img_avar)
+        ImageView imageView;
+        @BindView(R.id.tv_title)
+        TextView textView_title;
 
-        private HomeListAppAdapter mHomeListAppAdapter;
 
         public RecyclerHolder(View itemView) {
 
             super(itemView);
             ButterKnife.bind(this, itemView);
-            mHomeListAppAdapter = new HomeListAppAdapter(act);
-            recyclerView.setLayoutManager(new LinearLayoutManager(itemView.getContext(), LinearLayoutManager.HORIZONTAL, false));
-            recyclerView.setAdapter(mHomeListAppAdapter);
         }
+        private void setData(int pos){
+            final AppModel result = mList1.get(pos);
+            if(result.getSource() !=null) {
+                AppModel.SourceBean sourceBean = result.getSource();
+                textView_title.setText(sourceBean.getTitle());
 
-        private void setData(final int pos) {
-            switch (pos) {
-                case 0:
-                    mHomeListAppAdapter.setmList(mList1);
-                    progressBar.setVisibility((mList1 != null && !mList1.isEmpty()) ? View.GONE : View.VISIBLE);
-                    textView_list_app.setText("Lastest ");
-                    textView_list_end.setText("Sale");
-                    break;
-                case 1:
-                    mHomeListAppAdapter.setmList(mList2);
-                    progressBar.setVisibility((mList2 != null && !mList2.isEmpty()) ? View.GONE : View.VISIBLE);
-                    textView_list_app.setText("Top Download ");
-                    textView_list_end.setText("Apps");
-                    break;
-                case 2:
-                    progressBar.setVisibility((mList3 != null && !mList3.isEmpty()) ? View.GONE : View.VISIBLE);
-                    mHomeListAppAdapter.setmList(mList3);
-                    textView_list_app.setText("Top Grossing Android ");
-                    textView_list_end.setText("Apps");
-                    break;
-                default:
-                    progressBar.setVisibility((mList4 != null && !mList4.isEmpty()) ? View.GONE : View.VISIBLE);
-                    mHomeListAppAdapter.setmList(mList4);
-                    textView_list_app.setText("Apps ");
-                    textView_list_end.setText("Gone Free");
-                    break;
+                if (sourceBean.getCover() == null){
+                    ImageUtil.loadImageRounded(itemView.getContext(),sourceBean.getThumbnail(),imageView,R.drawable.events_placeholder,R.drawable.image_placeholder_500x500);
+                }else{
+                    ImageUtil.loadImageRounded(itemView.getContext(), sourceBean.getCover(), imageView,R.drawable.events_placeholder,R.drawable.image_placeholder_500x500);
+                }
 
+            } else {
+                textView_title.setText("");
+                imageView.setImageResource(R.color.gray_light);
             }
-            button_see_more.setOnClickListener(new View.OnClickListener() {
+            itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(itemView.getContext(),ShowMoreActicity.class);
-                    intent.putExtra("CHECKCATE","FALSE");
-                    switch (pos){
-                        case 0:
-                            intent.putExtra("CATE_URL","http://appsxyz.com/api/apk/lastes-sale/?page=%s&size=20");
-                            intent.putExtra("CATE_NAME","lastest");
-                            break;
-                        case 1:
-                            intent.putExtra("CATE_URL","http://appsxyz.com/api/apk/topdownload/?page=%s&size=20");
-                            intent.putExtra("CATE_NAME","topdownload");
-                            break;
-                        case 2:
-                            intent.putExtra("CATE_URL","http://appsxyz.com/api/apk/grossing/?page=%s&size=20&installs=1000");
-                            intent.putExtra("CATE_NAME","grossing");
-                            break;
-                        default:
-                            intent.putExtra("CATE_URL","http://appsxyz.com/api/apk/gonefree/?page=%s&size=20");
-                            intent.putExtra("CATE_NAME","gonefree");
-                            break;
-                    }
-                    itemView.getContext().startActivity(intent);
+                    imageView.setTransitionName("image_avatar");
+
+                    EventBus.getDefault().postSticky(result.getSource());
+
+                    Intent intent = new Intent(itemView.getContext(), DetailActivity.class);
+                    ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(act,imageView,"image_avatar" );
+
+                    itemView.getContext().startActivity(intent,optionsCompat.toBundle());
+
+
                 }
             });
         }
+
 
     }
 }

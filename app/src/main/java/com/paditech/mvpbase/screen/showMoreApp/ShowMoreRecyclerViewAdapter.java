@@ -71,11 +71,11 @@ public class ShowMoreRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVi
 
         @BindView(R.id.img_avar)
         ImageView imageView;
-        @BindView(R.id.tv_price)
+//        @BindView(R.id.tv_price)
         TextView textView_price;
         @BindView(R.id.tv_title)
         TextView textView_title;
-        @BindView(R.id.tv_lastest_price)
+//        @BindView(R.id.tv_lastest_price)
         TextView tv_lastest_price;
         String appid = "";
 
@@ -94,13 +94,13 @@ public class ShowMoreRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVi
                 textView_title.setText(sourceBean.getTitle());
                 ImageUtil.loadImageRounded(itemView.getContext(), sourceBean.getCover(), imageView, R.drawable.events_placeholder,R.drawable.image_placeholder_500x500);
                 appid = sourceBean.getAppid();
-                if (sourceBean.getAllPrice() != null) {
-                    textView_price.setText("$" + sourceBean.getAllPrice().get(1) + " ");
-                    tv_lastest_price.setText("$" + sourceBean.getAllPrice().get(0));
-
-                } else {
-                    tv_lastest_price.setText("Free");
-                }
+//                if (sourceBean.getAllPrice() != null) {
+//                    textView_price.setText("$" + sourceBean.getAllPrice().get(1) + " ");
+//                    tv_lastest_price.setText("$" + sourceBean.getAllPrice().get(0));
+//
+//                } else {
+//                    tv_lastest_price.setText("Free");
+//                }
 
 
             } else {

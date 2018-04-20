@@ -112,5 +112,7 @@ dependencies {
 
     compile 'com.github.jrvansuita:GaussianBlur:+'
     compile 'jp.wasabeef:blurry:2.1.1'
+
+//    compile 'com.github.adroitandroid:ChipCloud:2.2.1'
 }
 

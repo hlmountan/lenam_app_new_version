@@ -7,4 +7,9 @@ import com.paditech.mvpbase.common.mvp.activity.ActivityPresenter;
  */
 
 public class MainPresenter extends ActivityPresenter<MainContact.ViewOps> implements MainContact.PresenterViewOps {
+    @Override
+    public void getInfo() {
+        getView().setview();
+
+    }
 }

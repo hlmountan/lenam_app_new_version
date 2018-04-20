@@ -11,18 +11,29 @@ import com.paditech.mvpbase.common.mvp.activity.MVPActivity;
  */
 
 public class MainActivity extends MVPActivity<MainContact.PresenterViewOps> implements MainContact.ViewOps {
+
+
+
     @Override
     protected int getContentView() {
         return R.layout.activity_main;
     }
 
+
     @Override
     protected void initView() {
+
+        getPresenter().getInfo();
 
     }
 
     @Override
     protected Class<? extends ActivityPresenter> onRegisterPresenter() {
         return MainPresenter.class;
+    }
+
+    @Override
+    public void setview() {
+
     }
 }

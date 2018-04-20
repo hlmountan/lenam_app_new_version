@@ -1,150 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.paditech.mvpbase.screen.main.HomeActivity">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    tools:context="com.paditech.mvpbase.screen.main.HomeActivity"
+    android:background="@color/white_transfer"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
 
         <android.support.design.widget.AppBarLayout
+            android:id="@+id/ab_search"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/height_toolbar">
-
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            >
+            <RelativeLayout
+                android:id="@+id/search_bar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
-                app:layout_scrollFlags="scroll|enterAlways"
-                app:popupTheme="@style/Theme.AppCompat.Light">
+                android:background="@color/white_transfer"
+                android:paddingRight="@dimen/padding_small"
+                android:paddingLeft="@dimen/padding_small"
+                app:layout_scrollFlags="scroll|enterAlways">
 
+                <RelativeLayout
+                    android:id="@+id/right_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/padding_small">
+                    <Button
+                        android:id="@+id/btn_cancel_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cancel"
+                        android:textColor="@color/blue"
+                        android:background="@android:color/transparent"
+                        android:textSize="@dimen/text_size_small"
+                        android:layout_centerVertical="true"
+                        android:textAllCaps="false"
+                        android:minWidth="0dp"
+                        android:visibility="gone"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_notification"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/notifi_icon"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/right_button">
+                    <EditText
+                        android:id="@+id/edit_text_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=" I'm looking for . . ."
+                        android:textSize="@dimen/text_size_small"
+                        android:background="@drawable/border_gray_ligh_background"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_centerVertical="true"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:paddingTop="@dimen/padding_small"
+                        android:drawableLeft="@drawable/ic_search_grey_18dp"
+                        android:paddingLeft="@dimen/padding_super_tiny"
+                        android:drawablePadding="@dimen/padding_super_tiny"
+                        android:textColorHint="@color/hint_gray_color"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_002_qr_code"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/padding_small"
+                android:background="@color/white_transfer"/>
+            <LinearLayout
+                android:id="@+id/search_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white_transfer"
+                android:visibility="gone">
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center">
-
-                    <android.support.v7.widget.SearchView
-                        android:id="@+id/search_bar"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        app:searchHintIcon="@drawable/ic_search_grey_18dp"
-                        android:background="@color/white_transfer">
-
-                    </android.support.v7.widget.SearchView>
-
+                    android:layout_margin="@dimen/margin_small">
                     <TextView
-                        android:id="@+id/tv_tablayout_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/margin_negative_default"
-                        android:textAlignment="center"
-                        android:textColor="@color/main_green"
-                        android:textSize="@dimen/text_size_default"
-                        android:textStyle="bold"/>
+                        android:text="  All Category "
+                        />
+                    <Button
+                        android:id="@+id/btn_list_cate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:drawableRight="@drawable/ic_right_white_15dp"
+                        android:layout_alignParentRight="true"
+                        />
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_view_list_cate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/btn_list_cate"></android.support.v7.widget.RecyclerView>
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_view_search_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/btn_list_cate"></android.support.v7.widget.RecyclerView>
                 </RelativeLayout>
 
-            </android.support.v7.widget.Toolbar>
-        </android.support.design.widget.AppBarLayout>
 
-        <android.support.v4.view.ViewPager
-            android:id="@+id/vp_tablayout"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/line_size"
-            android:background="@color/gray_light"></View>
-        <android.support.design.widget.TabLayout
-            android:id="@+id/tab_layout"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/height_tablayout"
-            android:alpha="0.9"
-            app:tabSelectedTextColor="@color/main_green"
-            app:tabTextAppearance="@style/TabLayoutText"
-            app:tabTextColor="@color/gray"
-            android:background="@color/white"
-            app:tabIndicatorHeight="0dp"
-            >
 
-        </android.support.design.widget.TabLayout>
-
-    </LinearLayout>
-
-    <android.support.design.widget.NavigationView
-        android:id="@+id/navigation"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:background="@drawable/navi"
-        android:fitsSystemWindows="true"
-
-        >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="@dimen/width_super_big"
-                android:layout_height="@dimen/height_big"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/margin_default"
-                android:src="@drawable/logo" />
-
-            <TextView
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/notification_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_default"
-                android:layout_marginTop="@dimen/margin_large"
-                android:text="Manage Your App"
-                android:textAlignment="center"
-                android:textColor="@color/white_transfer"
-                android:textSize="@dimen/text_size_big" />
+                android:layout_height="match_parent"
+                android:background="@color/gray_light"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border_layout_view"
+                    android:layout_marginTop="@dimen/margin_default"
+                    android:layout_marginLeft="@dimen/margin_default"
+                    android:layout_marginRight="@dimen/margin_default"
+                    android:layout_marginBottom="@dimen/margin_recyclerview"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Notification"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_size_big"
+                        android:textStyle="bold"
+                        android:padding="@dimen/padding_small"
+                        android:alpha="0.85"/>
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_view_notification"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/padding_small"
+                        android:paddingRight="@dimen/padding_small"
+                        ></android.support.v7.widget.RecyclerView>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@android:color/transparent"
-                android:drawableLeft="@drawable/tag"
-                android:text="Update"
-                android:textAllCaps="false"
-                android:textColor="@color/white_transfer" />
+                </LinearLayout>
+            </LinearLayout>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="@dimen/margin_tiny"
-                android:background="@android:color/transparent"
-                android:drawableLeft="@drawable/clouddown"
-                android:paddingLeft="@dimen/padding_super_tiny"
-                android:text="    Downloaded"
-                android:textAllCaps="false"
-                android:textColor="@color/white_transfer" />
+        </FrameLayout>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@android:color/transparent"
-                android:drawableLeft="@drawable/pulse"
-                android:text="  Installed"
-                android:textAllCaps="false"
-                android:textColor="@color/white_transfer" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btn_assivetouch"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/pulse"
+            android:backgroundTint="@color/blue"
+            android:layout_marginBottom="@dimen/margin_small"
+            app:borderWidth="0dp"
+            android:layout_gravity="bottom|center_horizontal"
+            />
 
 
-        </LinearLayout>
-    </android.support.design.widget.NavigationView>
-</android.support.v4.widget.DrawerLayout>
+</android.support.design.widget.CoordinatorLayout>

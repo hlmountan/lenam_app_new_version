@@ -32,7 +32,7 @@ public abstract class MVPActivity<P extends ActivityPresenterViewOps> extends Ba
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+
         try {
             PRESENTER_ID = getClass().getSimpleName() + System.currentTimeMillis();
             registerPresenter();
@@ -41,6 +41,7 @@ public abstract class MVPActivity<P extends ActivityPresenterViewOps> extends Ba
         } catch (Exception e) {
             e.printStackTrace();
         }
+        super.onCreate(savedInstanceState);
     }
 
     @Override

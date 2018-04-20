@@ -69,6 +69,7 @@ import com.paditech.mvpbase.common.dialog.MessageDialog;
 import com.paditech.mvpbase.common.model.AppModel;
 import com.paditech.mvpbase.common.model.AppPriceHistory;
 import com.paditech.mvpbase.common.model.Appsxyz;
+import com.paditech.mvpbase.common.mvp.activity.ActivityPresenter;
 import com.paditech.mvpbase.common.mvp.activity.MVPActivity;
 import com.paditech.mvpbase.common.service.APIClient;
 import com.paditech.mvpbase.common.service.ICallBack;
@@ -109,7 +110,7 @@ import butterknife.BindView;
  * Created by hung on 1/5/2018.
  */
 
-public class DetailActivity extends BaseActivity {
+public class DetailActivity extends MVPActivity<DetailContact.PresenterViewOps> implements DetailContact.ViewOps {
 
     List<Entry> entries = new ArrayList<Entry>();
     private ArrayList<ArrayList<String>> screenShot = null;
@@ -118,7 +119,7 @@ public class DetailActivity extends BaseActivity {
     ArrayList<ArrayList<String>> priceHistory = null;
     ArrayList<ArrayList<String>> priceHistory_trans_date = null;
     HomeListAppAdapter mHomeListAppAdapter = new HomeListAppAdapter(this);
-    HomeViewPagerAdapter mDetailViewPagerAdapter;
+    DetailViewPagerAdapter mDetailViewPagerAdapter;
     private List<AppModel.SourceBean> mList = new ArrayList<>();
     String title;
     @BindView(R.id.recycler_view_relate_app)
@@ -169,7 +170,7 @@ public class DetailActivity extends BaseActivity {
     public int des_lines;
     private String urlInstall;
     private boolean animing;
-
+    Integer isHistory;
     @Override
     protected int getContentView() {
         return R.layout.act_detail_new;
@@ -198,6 +199,11 @@ public class DetailActivity extends BaseActivity {
     }
 
     @Override
+    protected Class<? extends ActivityPresenter> onRegisterPresenter() {
+        return DetailPresenter.class;
+    }
+
+    @Override
     protected void onRestart() {
         progressBar_chart.setVisibility(View.GONE);
         super.onRestart();
@@ -206,8 +212,7 @@ public class DetailActivity extends BaseActivity {
     @Override
     protected void initView() {
         // be called  when click on viewpager
-        chart.setVisibility(View.GONE);
-        view_page_screenshot.setVisibility(View.GONE);
+
         recycler_view_relate_app.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         recycler_view_relate_app.setAdapter(mHomeListAppAdapter);
         //btn  way back to the previous screen
@@ -343,6 +348,7 @@ public class DetailActivity extends BaseActivity {
 
     @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
     public void onGetAppEvent(AppModel.SourceBean app) {
+
         if (!getIntent().getBooleanExtra("is_cover", false))
             ImageUtil.loadImage(DetailActivity.this, app.getCover(), imgAvatar, R.drawable.events_placeholder, R.drawable.image_placeholder_500x500);
         // setup BlurView
@@ -357,75 +363,26 @@ public class DetailActivity extends BaseActivity {
                 });
             }
         });
-        if (app.getTitle() != null) tv_title_scroll.setText(app.getTitle());
-        getAppHistory("https://appsxyz.com/api/apk/price_history/?appid=" + app.getAppid());
-        setupAppInfo("https://appsxyz.com/api/apk/detailApp/?appid=" + app.getAppid());
-        if (app.getInstalls() != 0) {
-            tv_install_number.setText("" + NumberFormat.getInstance().format(app.getInstalls()));
+
+        if (app.getAll_price() != null){
+            isHistory=0;
+            getPresenter().cURLFromApi(app.getAppid(),0);
+        }else {
+            isHistory=1;
+            getPresenter().cURLFromApi(app.getAppid(),1);
+
         }
+
+//        if (app.getTitle() != null) tv_title_scroll.setText(app.getTitle());
+//        getAppHistory("https://appsxyz.com/api/apk/price_history/?appid=" + app.getAppid());
+//        setupAppInfo("https://appsxyz.com/api/apk/detailApp/?appid=" + app.getAppid());
+//        if (app.getInstalls() != 0) {
+//            tv_install_number.setText("" + NumberFormat.getInstance().format(app.getInstalls()));
+//        }
     }
 
 
-    private void setupAppInfo(String url) {
-        APIClient.getInstance().execGet(url, null, new ICallBack() {
-            @Override
-            public void onErrorToken() {
-            }
 
-            @Override
-            public void onFailed(IOException e) {
-            }
-
-            @Override
-            public void onResponse(String response, boolean isSuccessful) {
-                final AppModel.SourceBean app = new Gson().fromJson(response, AppModel.SourceBean.class);
-                if (app != null) {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            try {
-                                if (app.getPrice() != 0)
-                                    btn_install_app.setText("$" + app.getPrice());
-                                else {
-                                    btn_install_app.setText("" + getResources().getString(R.string.download_apk));
-                                    setUrlInstall(app);
-                                }
-                                if (app.getTitle() != null) tv_title_scroll.setText(app.getTitle());
-                                textView_title.setText(app.getTitle());
-                                ImageUtil.loadImage(DetailActivity.this, app.getCover(), imgAvatar, R.drawable.events_placeholder, R.drawable.image_placeholder_500x500);
-
-                                getRelateData("http://appsxyz.com/api/apk/search_related/?q=" + URLEncoder.encode(app.getTitle()) + "&page=1&size=6");
-                                tv_gp_info.setText(app.getPrice() + "\n" + NumberFormat.getInstance().format(app.getRateTotal()) + "\n" + app.getScore() + "\n" + app.getRequireandroid() + "\n" + app.getOfferby());
-                                tv_offerby.setText(app.getOfferby());
-                                tv_version.setText("Version: " + app.getVersion());
-                                //set title for download api
-                                title = app.getAppid().replace(" ", "_").replace(".", "_");
-
-                                //bo html trong description dem so dong cuar text
-                                String des = app.getDescription();
-                                linesCount(des);
-                                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                                    tv_description.setText(Html.fromHtml(des, Html.FROM_HTML_MODE_COMPACT));
-                                } else {
-                                    tv_description.setText(Html.fromHtml(des));
-                                }
-                                //set up screenshot data
-                                screenShot = app.getScreenShot();
-                                if (app.getScreenShot() != null)
-                                    setUpViewpager(app.getScreenShot());
-                            } catch (Exception e) {
-                                System.out.println(e);
-                            }
-
-                        }
-                    });
-
-                }
-            }
-        });
-
-
-    }
 
     private void setUpViewpager(ArrayList<ArrayList<String>> screenShot) {
         for (ArrayList<String> a : screenShot) {
@@ -433,9 +390,13 @@ public class DetailActivity extends BaseActivity {
             appModel.setCover(a.get(2));
             mList.add(appModel);
         }
-        mDetailViewPagerAdapter = new HomeViewPagerAdapter();
+        tv_price_history.setText("Android");
+        view_page_screenshot.setVisibility(View.VISIBLE);
+        progressBar_chart.setVisibility(View.GONE);
+
+        mDetailViewPagerAdapter = new DetailViewPagerAdapter();
         mDetailViewPagerAdapter.setList(mList);
-        mDetailViewPagerAdapter.setActivityName("DETAIL");
+//        mDetailViewPagerAdapter.setActivityName("DETAIL");
         view_page_screenshot.setAdapter(mDetailViewPagerAdapter);
     }
 
@@ -639,6 +600,76 @@ public class DetailActivity extends BaseActivity {
 
     }
 
+    @Override
+    public void setAppInfo(final AppModel.SourceBean app) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    if (isHistory != 0)
+                        btn_install_app.setText("$" + app.getPrice());
+                    else {
+                        btn_install_app.setText("" + getResources().getString(R.string.download_apk));
+                        setUrlInstall(app);
+                    }
+
+                    if (app.getTitle() != null) tv_title_scroll.setText(app.getTitle());
+                    textView_title.setText(app.getTitle());
+
+                    tv_offerby.setText(app.getOfferby());
+                    tv_version.setText("Version: " + app.getVersion());
+                    String des = app.getDescription();
+                    System.out.println(app.getDescription());
+                    linesCount(des);
+
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                        tv_description.setText(Html.fromHtml(des, Html.FROM_HTML_MODE_COMPACT));
+                    } else {
+                        tv_description.setText(Html.fromHtml(des));
+                    }
+                    //set up screenshot data
+                    screenShot = app.getScreenShot();
+                    if (app.getScreenShot() != null){
+                        setUpViewpager(app.getScreenShot());
+                        System.out.println(app.getScreenShot());
+                    }
+
+
+                    //set title for download api
+                    title = app.getAppid().replace(" ", "_").replace(".", "_");
+                }catch (Exception e){
+                    System.out.println(e);
+                }
+            }
+        });
+
+    }
+
+    @Override
+    public void setAppPriceHistory(ArrayList<ArrayList<String>> priceHistory) {
+        tv_price_history.setText("Price History");
+        this.priceHistory = priceHistory;
+        lineChartData();
+        chart.setVisibility(View.VISIBLE);
+        view_page_screenshot.setVisibility(View.GONE);
+        progressBar_chart.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setRelateApp() {
+
+    }
+
+    @Override
+    public void setPriceHistory() {
+
+    }
+
+    @Override
+    public void setDevApp() {
+
+    }
+
     private class DownloadTask extends AsyncTask<String, Integer, String> {
 
         private Context context;
@@ -757,30 +788,30 @@ public class DetailActivity extends BaseActivity {
 
     private void setUrlInstall(AppModel.SourceBean app) {
 
-        if ((app != null) && (app.getPrice() == 0)) {
-            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-            String salt = "axq appnaz.com";
-            String hasd = salt + timestamp.getTime();
-
-            // create md5 code with the merging of salt and current timestamp
-            final String MD5 = "MD5";
-            MessageDigest md = null;
-            try {
-                md = MessageDigest.getInstance(MD5);
-            } catch (NoSuchAlgorithmException e) {
-                e.printStackTrace();
-            }
-            md.update(hasd.getBytes(), 0, hasd.length());
-            String newHasd = new BigInteger(1, md.digest()).toString(16);
-            while (newHasd.length() < 32)
-                newHasd = "0" + newHasd;
-            String titleUrl = app.getTitle() == null ? "" : app.getTitle().replace(" ", "-");
-            String fieldId = app.getAppid() + "_appnaz.com_" + app.getVersion();
-            String field = "app=" + titleUrl + "&appid=" + fieldId + "&ds=" + newHasd + "&t=" + timestamp.getTime();
-            this.urlInstall = "http://downloadapk.appnaz.com/file/apk_file?" + field;
-        } else {
-            this.urlInstall = "Tin Nguoi VCL!!!";
-        }
+//        if ((app != null) && (app.getPrice() == 0)) {
+//            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+//            String salt = "axq appnaz.com";
+//            String hasd = salt + timestamp.getTime();
+//
+//            // create md5 code with the merging of salt and current timestamp
+//            final String MD5 = "MD5";
+//            MessageDigest md = null;
+//            try {
+//                md = MessageDigest.getInstance(MD5);
+//            } catch (NoSuchAlgorithmException e) {
+//                e.printStackTrace();
+//            }
+//            md.update(hasd.getBytes(), 0, hasd.length());
+//            String newHasd = new BigInteger(1, md.digest()).toString(16);
+//            while (newHasd.length() < 32)
+//                newHasd = "0" + newHasd;
+//            String titleUrl = app.getTitle() == null ? "" : app.getTitle().replace(" ", "-");
+//            String fieldId = app.getAppid() + "_appnaz.com_" + app.getVersion();
+//            String field = "app=" + titleUrl + "&appid=" + fieldId + "&ds=" + newHasd + "&t=" + timestamp.getTime();
+//            this.urlInstall = "http://downloadapk.appnaz.com/file/apk_file?" + field;
+//        } else {
+//            this.urlInstall = "Tin Nguoi VCL!!!";
+//        }
     }
 
     private String getUrlInstall() {

@@ -24,9 +24,6 @@ import com.paditech.mvpbase.common.utils.CommonUtil;
 import com.paditech.mvpbase.common.view.LoadMoreRecyclerView;
 import com.paditech.mvpbase.common.view.TranslationNestedScrollView;
 
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
-
 import java.io.IOException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
@@ -94,7 +91,7 @@ public class ShowMoreActicity extends BaseActivity implements SwipeRefreshLayout
             setRecyclerViewAdapter();
         }
         // present screen name
-        setCatename(intent.getStringExtra("CATE_NAME"));
+//        setCatename(intent.getStringExtra("CATE_NAME"));
     }
 
 
@@ -220,7 +217,7 @@ public class ShowMoreActicity extends BaseActivity implements SwipeRefreshLayout
     public void setRecyclerViewAdapter() {
         if (mShowMoreRecyclerViewAdapter == null) {
             mShowMoreRecyclerViewAdapter = new ShowMoreRecyclerViewAdapter(this);
-            getMoreApp();
+//            getMoreApp();
         }
         mGridLayoutManager = new GridLayoutManager(ShowMoreActicity.this, 3);
         recyclerViewShowMore.setLayoutManager(mGridLayoutManager);
@@ -233,13 +230,13 @@ public class ShowMoreActicity extends BaseActivity implements SwipeRefreshLayout
     @Override
     public void onRefresh() {
         mPage = 1;
-        getMoreApp();
+//        getMoreApp();
     }
 
     @Override
     public void onLoadMore() {
         mPage++;
-        getMoreApp();
+//        getMoreApp();
         System.out.println(" load more ");
     }
 

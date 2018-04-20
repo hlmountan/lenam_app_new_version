@@ -1,44 +1,28 @@
 package com.paditech.mvpbase.screen.search;
 
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SearchView;
-import android.util.EventLog;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.paditech.mvpbase.R;
 import com.paditech.mvpbase.common.base.BaseFragment;
-import com.paditech.mvpbase.common.model.AppModel;
 import com.paditech.mvpbase.common.model.Appsxyz;
-import com.paditech.mvpbase.common.mvp.fragment.FragmentPresenter;
-import com.paditech.mvpbase.common.mvp.fragment.MVPFragment;
 import com.paditech.mvpbase.common.service.APIClient;
 import com.paditech.mvpbase.common.service.ICallBack;
 import com.paditech.mvpbase.common.utils.CommonUtil;
 import com.paditech.mvpbase.common.view.LoadMoreRecyclerView;
 import com.paditech.mvpbase.screen.home.HomeListAppAdapter;
-import com.paditech.mvpbase.screen.main.HomeActivity;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
 import java.io.IOException;
-import java.util.List;
 
 import butterknife.BindView;
 

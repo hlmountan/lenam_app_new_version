@@ -113,7 +113,7 @@ public class ShowMoreViewPagerAdapter extends PagerAdapter {
                             public void run() {
                                 try{
                                     AppModel.SourceBean sourceBean = new AppModel.SourceBean();
-                                    sourceBean.setCover(app.getScreenShot().get(0).get(2));
+//                                    sourceBean.setCover(app.getScreenShot().get(0).get(2));
                                     sourceBean.setAppid(app.getAppid());
                                     mList.add(sourceBean);
                                     notifyDataSetChanged();

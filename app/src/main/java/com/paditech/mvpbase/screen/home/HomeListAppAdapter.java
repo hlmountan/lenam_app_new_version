@@ -2,26 +2,18 @@ package com.paditech.mvpbase.screen.home;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.RecyclerView;
-import android.transition.Explode;
-import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.paditech.mvpbase.R;
 import com.paditech.mvpbase.common.model.AppModel;
-import com.paditech.mvpbase.common.model.Appsxyz;
 import com.paditech.mvpbase.common.utils.ImageUtil;
 import com.paditech.mvpbase.screen.detail.DetailActivity;
-import com.paditech.mvpbase.screen.main.HomeActivity;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -85,11 +77,11 @@ public class HomeListAppAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
         @BindView(R.id.img_avar)
         ImageView imageView;
-        @BindView(R.id.tv_price)
+//        @BindView(R.id.tv_price)
         TextView textView_price;
         @BindView(R.id.tv_title)
         TextView textView_title;
-        @BindView(R.id.tv_lastest_price)
+//        @BindView(R.id.tv_lastest_price)
         TextView tv_lastest_price;
 
         public AppHolder(View itemView) {
@@ -102,27 +94,27 @@ public class HomeListAppAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             if(result.getSource() !=null) {
                 AppModel.SourceBean sourceBean = result.getSource();
                 textView_title.setText(sourceBean.getTitle());
-
+//
                 if (sourceBean.getCover() == null){
                     ImageUtil.loadImageRounded(itemView.getContext(),sourceBean.getThumbnail(),imageView,R.drawable.events_placeholder,R.drawable.image_placeholder_500x500);
                 }else{
                     ImageUtil.loadImageRounded(itemView.getContext(), sourceBean.getCover(), imageView,R.drawable.events_placeholder,R.drawable.image_placeholder_500x500);
                 }
-                if (sourceBean.getAllPrice() != null){
-                    textView_price.setText("$"+sourceBean.getAllPrice().get(1)+" ");
-                    tv_lastest_price.setText("$"+sourceBean.getAllPrice().get(0));
-
-                }
-                else{
-                    tv_lastest_price.setText("Free");
-                }
-
-
-            } else {
-                textView_title.setText("");
-                imageView.setImageResource(R.color.gray_light);
-            }
-
+//                if (sourceBean.getAllPrice() != null){
+//                    textView_price.setText("$"+sourceBean.getAllPrice().get(1)+" ");
+//                    tv_lastest_price.setText("$"+sourceBean.getAllPrice().get(0));
+//
+//                }
+//                else{
+//                    tv_lastest_price.setText("Free");
+//                }
+//
+//
+//            } else {
+//                textView_title.setText("");
+//                imageView.setImageResource(R.color.gray_light);
+//            }
+//
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -138,7 +130,7 @@ public class HomeListAppAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             });
         }
 
-
+        }
 
     }
 }

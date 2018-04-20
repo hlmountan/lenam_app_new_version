@@ -9,10 +9,10 @@ import com.paditech.mvpbase.common.mvp.activity.ActivityViewOps;
 
 public interface MainContact {
     interface ViewOps extends ActivityViewOps {
-
+        public  void setview() ;
     }
 
     interface PresenterViewOps extends ActivityPresenterViewOps {
-
+        public void getInfo();
     }
 }

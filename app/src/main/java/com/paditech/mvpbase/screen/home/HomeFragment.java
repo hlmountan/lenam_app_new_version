@@ -2,67 +2,96 @@ package com.paditech.mvpbase.screen.home;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v4.app.ActivityOptionsCompat;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.view.MotionEvent;
+import android.support.v7.widget.SnapHelper;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
+import android.widget.Button;
 
-import com.google.gson.Gson;
 import com.paditech.mvpbase.R;
-import com.paditech.mvpbase.common.base.BaseFragment;
 import com.paditech.mvpbase.common.model.AppModel;
 import com.paditech.mvpbase.common.model.Appsxyz;
-import com.paditech.mvpbase.common.service.APIClient;
-import com.paditech.mvpbase.common.service.ICallBack;
+import com.paditech.mvpbase.common.mvp.fragment.FragmentPresenter;
+import com.paditech.mvpbase.common.mvp.fragment.MVPFragment;
 import com.paditech.mvpbase.common.utils.CommonUtil;
-import com.paditech.mvpbase.common.view.SimpleDividerItemDecoration;
 import com.paditech.mvpbase.common.view.TranslationNestedScrollView;
-import com.paditech.mvpbase.screen.detail.DetailActivity;
+import com.paditech.mvpbase.screen.main.ScrollTopEvent;
+import com.paditech.mvpbase.screen.showMoreApp.ShowMoreActicity;
 
 import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
 import butterknife.BindView;
-import me.relex.circleindicator.CircleIndicator;
 
 /**
  * Created by hung on 1/2/2018.
  */
 
-public class HomeFragment extends BaseFragment {
+public class HomeFragment extends MVPFragment<HomeContact.PresenterViewOsp> implements HomeContact.ViewOsp {
 
-    HomeViewPagerAdapter mHomeViewPagerAdapter;
     HomeRecyclerViewAdapter mHomeRecyclerViewAdapter;
-    @BindView(R.id.view_pager_home)
-    ViewPager viewPagerHome;
-    @BindView(R.id.recycler_view_home)
-    RecyclerView recyclerViewHome;
-    @BindView(R.id.indicator)
-    CircleIndicator circleIndicator;
-    @BindView(R.id.progressBar)
-    ProgressBar progressBar;
+    HomeRecyclerViewAdapter mHomeRecyclerViewAdapter2;
+    HomeRecyclerViewAdapter mHomeRecyclerViewAdapter3;
+    HomeRecyclerViewAdapter mHomeRecyclerViewAdapter4;
+    HomeViewPagerAdapter mHomeViewPagerAdapter;
+    @BindView(R.id.recycler_view_recentely)
+    RecyclerView recycler_view_recentely;
+    @BindView(R.id.recycler_view_on_sale)
+    RecyclerView recycler_view_on_sale;
+    @BindView(R.id.btn_see_more)
+    Button btn_see_more;
+    @BindView(R.id.vp_main)
+    ViewPager vp_main;
+    @BindView(R.id.recycler_view_top_download)
+    RecyclerView recycler_view_top_download;
+
+    @BindView(R.id.recycler_view_grossing)
+    RecyclerView recycler_view_grossing;
     @BindView(R.id.scrollView_home)
-    TranslationNestedScrollView scrollView;
-    @BindView(R.id.linearlauout_home)
-    LinearLayout linearlauout_home;
-    Activity act;
-    private List<AppModel.SourceBean> mList = new ArrayList<>();
+    TranslationNestedScrollView scrollView_home;
     private boolean mRunned;
+
+    SnapHelper snapHelper = new StartSnapHelper();
+    SnapHelper snapHelper1 = new StartSnapHelper();
+    SnapHelper snapHelper2 = new StartSnapHelper();
+    SnapHelper snapHelper3 = new StartSnapHelper();
+
+    Activity act;
+    private GridLayoutManager gridLayoutManager;
+
 
     public static HomeFragment getInstance(Activity act) {
         HomeFragment f = new HomeFragment();
         f.setAct(act);
         return f;
+
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EventBus.getDefault().register(this);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void scrolltop(ScrollTopEvent event) {
+        scrollView_home.smoothScrollTo(0,0);
+        scrollView_home.scrollTo(0,0);
 
     }
 
@@ -81,81 +110,56 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     protected void initView(View view) {
-       scrollView.setViewPager(viewPagerHome, CommonUtil.getWidthScreen(getActivityReference()) / 2);
-        scrollView.setViewGroupBottom(linearlauout_home);
-        setViewpager();
-        setRecyclerViewAdapter();
         if (!mRunned) {
             Timer timer = new Timer();
             timer.scheduleAtFixedRate(new MyTimerTask(), 2000, 4000);
         }
         mRunned = true;
-    }
+        scrollView_home.setViewPager(vp_main,CommonUtil.getWidthScreen(getActivityReference())/3);
+        snapHelper.attachToRecyclerView(recycler_view_recentely);
+        snapHelper1.attachToRecyclerView(recycler_view_grossing);
+        snapHelper2.attachToRecyclerView(recycler_view_on_sale);
+        snapHelper3.attachToRecyclerView(recycler_view_top_download);
 
-    public void setViewpager() {
-        if (mList == null || mList.isEmpty()) {
+        mHomeRecyclerViewAdapter = new HomeRecyclerViewAdapter(act);
+        mHomeRecyclerViewAdapter2 = new HomeRecyclerViewAdapter(act);
+        mHomeRecyclerViewAdapter3 = new HomeRecyclerViewAdapter(act);
+        mHomeRecyclerViewAdapter4 = new HomeRecyclerViewAdapter(act);
 
-            mHomeViewPagerAdapter = new HomeViewPagerAdapter();
-            getPagerData();
-        }
-        viewPagerHome.setAdapter(mHomeViewPagerAdapter);
-        circleIndicator.setViewPager(viewPagerHome);
-
-
-    }
-
-    public void setRecyclerViewAdapter() {
-        if (mHomeRecyclerViewAdapter == null) {
-            mHomeRecyclerViewAdapter = new HomeRecyclerViewAdapter(getAct());
-            getFeedData1("http://appsxyz.com/api/apk/lastes-sale/?page=1&size=6");
-            getFeedData2("http://appsxyz.com/api/apk/topdownload/?page=1&size=6");
-            getFeedData3("http://appsxyz.com/api/apk/grossing/?page=1&size=6&installs=1000");
-            getFeedData4("http://appsxyz.com/api/apk/gonefree/?page=1&size=6");
-        }
-        recyclerViewHome.addItemDecoration(new SimpleDividerItemDecoration(getContext()));
-        recyclerViewHome.setLayoutManager(new LinearLayoutManager(getActivity()));
-        recyclerViewHome.setAdapter(mHomeRecyclerViewAdapter);
-        recyclerViewHome.setNestedScrollingEnabled(false);
+        mHomeRecyclerViewAdapter.setItemId(R.layout.item_app_small);
+        mHomeRecyclerViewAdapter.setItemNumber(12);
+        gridLayoutManager = new GridLayoutManager(act, 2, LinearLayoutManager.HORIZONTAL, false);
+        recycler_view_recentely.setLayoutManager(gridLayoutManager);
+        recycler_view_recentely.setAdapter(mHomeRecyclerViewAdapter);
+//        recycler_view_recentely.setNestedScrollingEnabled(false);
 
 
-    }
+        mHomeRecyclerViewAdapter2.setItemNumber(6);
+        mHomeRecyclerViewAdapter2.setItemId(R.layout.item_app);
+        recycler_view_on_sale.setLayoutManager(new LinearLayoutManager(act, LinearLayoutManager.HORIZONTAL, false));
+        recycler_view_on_sale.setAdapter(mHomeRecyclerViewAdapter2);
+//        recycler_view_on_sale.setNestedScrollingEnabled(false);
+//
 
-    private void getPagerData() {
-        String url = "http://appsxyz.com/api/apk/slider/?page=1&size=5&installs=1000";
-        APIClient.getInstance().execGet(url, null, new ICallBack() {
+        mHomeRecyclerViewAdapter3.setItemNumber(12);
+        mHomeRecyclerViewAdapter3.setItemId(R.layout.item_app_download);
+        recycler_view_grossing.setLayoutManager(new GridLayoutManager(act, 2, LinearLayoutManager.HORIZONTAL, false));
+        recycler_view_grossing.setAdapter(mHomeRecyclerViewAdapter3);
+//        recycler_view_grossing.setNestedScrollingEnabled(false);
+
+
+
+        mHomeRecyclerViewAdapter4.setItemId(20);
+        mHomeRecyclerViewAdapter4.setItemId(R.layout.item_app_download);
+        recycler_view_top_download.setLayoutManager(new GridLayoutManager(act, 3, LinearLayoutManager.HORIZONTAL, false));
+        recycler_view_top_download.setAdapter(mHomeRecyclerViewAdapter4);
+
+        getPresenter().getAppFromApi();
+        setUpViewPager();
+        btn_see_more.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onErrorToken() {
-
-            }
-
-            @Override
-            public void onFailed(IOException e) {
-
-            }
-
-            @Override
-            public void onResponse(String response, boolean isSuccessful) {
-                System.out.println(response);
-                Appsxyz result = new Gson().fromJson(response, Appsxyz.class);
-                if (result != null) {
-
-                    for (AppModel app : result.getResult()) {
-                        AppModel.SourceBean newApp = new AppModel.SourceBean();
-                        newApp = app.getSource();
-                        mList.add(newApp);
-                    }
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            mHomeViewPagerAdapter.setList(mList);
-                            mHomeViewPagerAdapter.setActivityName("HOME");
-                            circleIndicator.setViewPager(viewPagerHome);
-                            progressBar.setVisibility(View.GONE);
-                        }
-                    });
-
-
-                }
+            public void onClick(View view) {
+                btn_see_more.getContext().startActivity(new Intent(btn_see_more.getContext(), ShowMoreActicity.class));
             }
         });
     }
@@ -169,10 +173,10 @@ public class HomeFragment extends BaseFragment {
                 @Override
                 public void run() {
                     try {
-                        if (viewPagerHome.getCurrentItem() != (mList.size() - 1))
-                            viewPagerHome.setCurrentItem(viewPagerHome.getCurrentItem() + 1);
+                        if (vp_main.getCurrentItem() != (2))
+                            vp_main.setCurrentItem(vp_main.getCurrentItem() + 1);
                         else
-                            viewPagerHome.setCurrentItem(0);
+                            vp_main.setCurrentItem(0);
                     } catch (Exception e) {
                         System.out.println(e);
                     }
@@ -182,123 +186,73 @@ public class HomeFragment extends BaseFragment {
 
         }
     }
+    @Override
+    public void loadSlider() {
 
-    private void getFeedData1(String url) {
+    }
 
-        APIClient.getInstance().execGet(url, null, new ICallBack() {
+    @Override
+    public void loadChild1(final List<AppModel> result) {
+        runOnUiThread(new Runnable() {
             @Override
-            public void onErrorToken() {
-
-            }
-
-            @Override
-            public void onFailed(IOException e) {
-
-            }
-
-            @Override
-            public void onResponse(String response, boolean isSuccessful) {
-                final Appsxyz result = new Gson().fromJson(response, Appsxyz.class);
-                if (result != null) {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            if (result.getResult() != null)
-                                mHomeRecyclerViewAdapter.setmList1(result.getResult());
-                        }
-                    });
-
-                }
+            public void run() {
+                mHomeRecyclerViewAdapter.setmList1(result);
             }
         });
     }
 
-    private void getFeedData2(String url) {
-        APIClient.getInstance().execGet(url, null, new ICallBack() {
+    @Override
+    public void loadChild2(final List<AppModel> result) {
+        runOnUiThread(new Runnable() {
             @Override
-            public void onErrorToken() {
-
-            }
-
-            @Override
-            public void onFailed(IOException e) {
-
-            }
-
-            @Override
-            public void onResponse(String response, boolean isSuccessful) {
-                final Appsxyz result = new Gson().fromJson(response, Appsxyz.class);
-                if (result != null) {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            if (result.getResult() != null)
-                                mHomeRecyclerViewAdapter.setmList2(result.getResult());
-                        }
-                    });
-
-                }
+            public void run() {
+                mHomeRecyclerViewAdapter2.setmList1(result);
             }
         });
     }
 
-    private void getFeedData3(String url) {
-        APIClient.getInstance().execGet(url, null, new ICallBack() {
+    @Override
+    public void loadChild3(final List<AppModel> result) {
+        runOnUiThread(new Runnable() {
             @Override
-            public void onErrorToken() {
+            public void run() {
 
-            }
-
-            @Override
-            public void onFailed(IOException e) {
-
-            }
-
-            @Override
-            public void onResponse(String response, boolean isSuccessful) {
-                final Appsxyz result = new Gson().fromJson(response, Appsxyz.class);
-                if (result != null) {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            if (result.getResult() != null)
-                                mHomeRecyclerViewAdapter.setmList3(result.getResult());
-                        }
-                    });
-
-                }
+                mHomeRecyclerViewAdapter3.setmList1(result);
             }
         });
     }
 
-    private void getFeedData4(String url) {
-        APIClient.getInstance().execGet(url, null, new ICallBack() {
+    @Override
+    public void loadChild4(final List<AppModel> result) {
+        runOnUiThread(new Runnable() {
             @Override
-            public void onErrorToken() {
+            public void run() {
 
-            }
-
-            @Override
-            public void onFailed(IOException e) {
-
-            }
-
-            @Override
-            public void onResponse(String response, boolean isSuccessful) {
-                final Appsxyz result = new Gson().fromJson(response, Appsxyz.class);
-                if (result != null) {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            if (result.getResult() != null)
-                                mHomeRecyclerViewAdapter.setmList4(result.getResult());
-                        }
-                    });
-
-                }
+                mHomeRecyclerViewAdapter4.setmList1(result);
             }
         });
     }
 
 
+    @Override
+    public void reloadSlider() {
+
+    }
+
+    @Override
+    public void reloadListApp() {
+
+    }
+
+
+    @Override
+    protected Class<? extends FragmentPresenter> onRegisterPresenter() {
+        return HomePresenter.class;
+    }
+
+
+    private void setUpViewPager() {
+        mHomeViewPagerAdapter = new HomeViewPagerAdapter();
+        vp_main.setAdapter(mHomeViewPagerAdapter);
+    }
 }

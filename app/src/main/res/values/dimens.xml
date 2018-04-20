@@ -10,6 +10,7 @@
 
 
     <dimen name="app_img_size">80dp</dimen>
+    <dimen name="app_img_size_small">50dp</dimen>
     <dimen name="app_layout_width">120dp</dimen>
     <dimen name="home_page_height">200dp</dimen>
     <dimen name="cover_height">230dp</dimen>
@@ -25,8 +26,10 @@
     <dimen name="width_small">20dp</dimen>
     <dimen name="width_super_big">200dp</dimen>
     <dimen name="width_download_icon">120dp</dimen>
+    <dimen name="width_download_icon_small">90dp</dimen>
     <dimen name="width_nav_icon">30dp</dimen>
     <dimen name="width_install_icon">13dp</dimen>
+    <dimen name="width_notification">35dp</dimen>
 
 
     <dimen name="height_default">30dp</dimen>
@@ -44,6 +47,7 @@
     <dimen name="margin_default">14dp</dimen>
     <dimen name="margin_big">20dp</dimen>
     <dimen name="margin_large">30dp</dimen>
+    <dimen name="margin_super_large">45dp</dimen>
     <dimen name="margin_small">8dp</dimen>
     <dimen name="margin_tiny">5dp</dimen>
     <dimen name="margin_super_tiny">3dp</dimen>
@@ -76,6 +80,6 @@
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
-    <integer name="text_line">3</integer>
+    <integer name="text_line">5</integer>
     <dimen name="status_bar_height">25dp</dimen>
 </resources>

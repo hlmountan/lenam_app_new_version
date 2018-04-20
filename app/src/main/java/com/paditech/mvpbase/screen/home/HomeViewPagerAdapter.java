@@ -1,25 +1,13 @@
 package com.paditech.mvpbase.screen.home;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.google.gson.Gson;
+import com.paditech.mvpbase.R;
 import com.paditech.mvpbase.common.model.AppModel;
-import com.paditech.mvpbase.common.model.Appsxyz;
-import com.paditech.mvpbase.common.service.APIClient;
-import com.paditech.mvpbase.common.service.ICallBack;
-import com.paditech.mvpbase.common.utils.ImageUtil;
-import com.paditech.mvpbase.screen.detail.DetailActivity;
-import com.paditech.mvpbase.screen.detail.ScreenShotFullScreenActivity;
 
-import org.greenrobot.eventbus.EventBus;
-
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -47,10 +35,7 @@ public class HomeViewPagerAdapter extends PagerAdapter {
     @Override
 
     public int getCount() {
-        if (mList != null)
-            return mList.size();
-        else
-            return 0;
+            return 3;
     }
 
     @Override
@@ -61,32 +46,45 @@ public class HomeViewPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(final ViewGroup container, final int position) {
         final ImageView mImageView = new ImageView(container.getContext());
-        mImageView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+//        mImageView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         mImageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        ImageUtil.loadImage(container.getContext(), mList.get(position).getCover(), mImageView);
+//        ImageUtil.loadImage(container.getContext(), mList.get(position).getCover(), mImageView);
+//        container.addView(mImageView);
+//        mImageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent;
+//                switch (getActivityName()) {
+//                    case "HOME":
+//                        EventBus.getDefault().postSticky(mList.get(position));
+//                        intent = new Intent(view.getContext(), DetailActivity.class);
+//                        intent.putExtra("is_cover",true);
+//                        mImageView.getContext().startActivity(intent);
+//                        break;
+//                    default:
+//                        EventBus.getDefault().postSticky(mList);
+//                        intent = new Intent(view.getContext(), ScreenShotFullScreenActivity.class);
+//                        mImageView.getContext().startActivity(intent);
+//                        break;
+//                }
+//
+//            }
+//
+//        });
+
+        switch (position){
+            case 0:
+
+                mImageView.setImageResource(R.drawable.rectangle);
+                break;
+            case 1:
+                mImageView.setImageResource(R.drawable.vp2);
+                break;
+            default:
+                mImageView.setImageResource(R.drawable.vp1);
+                break;
+        }
         container.addView(mImageView);
-        mImageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent;
-                switch (getActivityName()) {
-                    case "HOME":
-                        EventBus.getDefault().postSticky(mList.get(position));
-                        intent = new Intent(view.getContext(), DetailActivity.class);
-                        intent.putExtra("is_cover",true);
-                        mImageView.getContext().startActivity(intent);
-                        break;
-                    default:
-                        EventBus.getDefault().postSticky(mList);
-                        intent = new Intent(view.getContext(), ScreenShotFullScreenActivity.class);
-                        mImageView.getContext().startActivity(intent);
-                        break;
-                }
-
-            }
-
-        });
-
         return mImageView;
     }
 
