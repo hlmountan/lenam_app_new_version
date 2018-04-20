@@ -78,10 +78,10 @@ public class HomeViewPagerAdapter extends PagerAdapter {
                 mImageView.setImageResource(R.drawable.rectangle);
                 break;
             case 1:
-                mImageView.setImageResource(R.drawable.vp2);
+                mImageView.setImageResource(R.drawable.beauti);
                 break;
             default:
-                mImageView.setImageResource(R.drawable.vp1);
+                mImageView.setImageResource(R.drawable.liquit);
                 break;
         }
         container.addView(mImageView);

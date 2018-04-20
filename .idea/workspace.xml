@@ -12,82 +12,29 @@
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a096c17-62c9-453e-97c9-6d03a5cb339b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/notification.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/rectangle.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/vp1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/vp2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lenam_app_new_version.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/apkManage/ApkContact.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/apkManage/ApkFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/apkManage/ApkPresenter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/detail/DetailContact.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/detail/DetailPresenter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomeActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomeContact.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomePresenter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/StartSnapHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/main/HomeActContact.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/main/HomeActPresenter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/main/NotificationRecycleViewAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/main/ScrollTopEvent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/border_gray_ligh_background.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/border_layout_view.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/circle_notification.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_001_qr_code_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_002_qr_code.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_alarm_on_notification_38b062fcfcd16083_512x512.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_camera_alt_gray_24dp.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_home.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/more_option.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/notifi_icon.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/notification_message.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/share.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/tag_01.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/tag_02.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/act_home.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_apk.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_app_download.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_app_small.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_notification.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lenam_app.iml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/asdasd.webp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/batle.webp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/beauti.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/liquit.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/sniper.webp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/seemore.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/tag_04.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/common/model/AppModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/common/model/AppModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/common/mvp/activity/MVPActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/common/mvp/activity/MVPActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/detail/DetailActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/detail/DetailActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomeFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomeFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomeListAppAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomeListAppAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomeRecyclerViewAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomeRecyclerViewAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/detail/DetailPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/detail/DetailPresenter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomeViewPagerAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomeViewPagerAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/main/HomeActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/main/HomeActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/main/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/main/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/main/MainContact.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/main/MainContact.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/main/MainPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/main/MainPresenter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/main/MainViewPagerAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/main/MainViewPagerAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/search/SearchFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/search/SearchFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/showMoreApp/ShowMoreActicity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/showMoreApp/ShowMoreActicity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/showMoreApp/ShowMoreRecyclerViewAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/showMoreApp/ShowMoreRecyclerViewAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/showMoreApp/ShowMoreViewPagerAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/showMoreApp/ShowMoreViewPagerAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_back__24dp.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_back__24dp.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_back_selected_24dp.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_back_selected_24dp.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_search_grey_18dp.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_search_grey_18dp.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/act_detail_new.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/act_detail_new.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/tag_02.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/tag_02.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_app.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_app.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_list_app.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_list_app.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -130,9 +77,34 @@
       <file leaf-file-name="HomeFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomeFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="107" column="31" lean-forward="false" selection-start-line="107" selection-start-column="31" selection-end-line="107" selection-end-column="31" />
+            <state relative-caret-position="347">
+              <caret line="254" column="46" lean-forward="false" selection-start-line="254" selection-start-column="46" selection-end-line="254" selection-end-column="46" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeViewPagerAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomeViewPagerAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="74" column="26" lean-forward="false" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomePresenter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomePresenter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+              <folding>
+                <element signature="class#642:1242" expanded="false" />
+                <element signature="class#1404:2004" expanded="false" />
+                <element signature="class#2126:2726" expanded="false" />
+                <element signature="class#2834:3434" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -143,9 +115,49 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="27" column="47" lean-forward="true" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
-              <folding />
+            <state relative-caret-position="337">
+              <caret line="143" column="64" lean-forward="false" selection-start-line="143" selection-start-column="64" selection-end-line="143" selection-end-column="64" />
+              <folding>
+                <element signature="e#518#788#0" expanded="false" />
+                <element signature="e#798#2936#0" expanded="false" />
+                <element signature="e#1015#1511#0" expanded="false" />
+                <element signature="e#1359#1380#0" expanded="true" />
+                <element signature="e#1423#1444#0" expanded="true" />
+                <element signature="e#1488#1509#0" expanded="true" />
+                <element signature="e#1524#2020#0" expanded="false" />
+                <element signature="e#1868#1889#0" expanded="true" />
+                <element signature="e#1932#1953#0" expanded="true" />
+                <element signature="e#1997#2018#0" expanded="true" />
+                <element signature="e#2033#2529#0" expanded="false" />
+                <element signature="e#2377#2398#0" expanded="true" />
+                <element signature="e#2441#2462#0" expanded="true" />
+                <element signature="e#2506#2527#0" expanded="true" />
+                <element signature="e#2752#2773#0" expanded="true" />
+                <element signature="e#2945#3985#0" expanded="false" />
+                <element signature="e#3117#3528#0" expanded="false" />
+                <element signature="e#3316#3337#0" expanded="true" />
+                <element signature="e#3414#3436#0" expanded="true" />
+                <element signature="e#3855#3876#0" expanded="true" />
+                <element signature="e#3994#4271#0" expanded="false" />
+                <element signature="e#4281#4561#0" expanded="false" />
+                <element signature="e#4369#4387#0" expanded="true" />
+                <element signature="e#4479#4500#0" expanded="true" />
+                <element signature="e#4538#4559#0" expanded="true" />
+                <element signature="e#4572#4917#0" expanded="false" />
+                <element signature="e#4760#4781#0" expanded="true" />
+                <element signature="e#4811#4833#0" expanded="true" />
+                <element signature="e#5225#5247#0" expanded="true" />
+                <element signature="e#5278#5695#0" expanded="false" />
+                <element signature="e#5537#5558#0" expanded="true" />
+                <element signature="e#5950#5971#0" expanded="true" />
+                <element signature="e#6395#6738#0" expanded="false" />
+                <element signature="e#6581#6602#0" expanded="true" />
+                <element signature="e#6632#6654#0" expanded="true" />
+                <element signature="e#6990#7137#0" expanded="false" />
+                <element signature="e#7330#7351#0" expanded="true" />
+                <element signature="e#7381#7403#0" expanded="true" />
+                <element signature="e#8056#8853#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -165,12 +177,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ic_l</find>
-      <find>ic_la</find>
-      <find>ic_lau</find>
-      <find>ic_launch</find>
-      <find>ic_launcher</find>
-      <find>icon_status_done</find>
       <find>System.out.println</find>
       <find>gs</find>
       <find>list</find>
@@ -195,6 +201,12 @@
       <find>chart</find>
       <find>ChipCloud</find>
       <find>SwitchMultiButton</find>
+      <find>setAppPriceHistory</find>
+      <find>recycler_view_grossing</find>
+      <find>mHomeRecyclerViewAdapter3</find>
+      <find>recycler_view_on_sale</find>
+      <find>btn_see_more</find>
+      <find>vp_main</find>
     </findStrings>
     <replaceStrings>
       <replace>#cccccc</replace>
@@ -3320,19 +3332,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomeViewPagerAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_list_app.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_app_download.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/common/model/Appsxyz.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/showMoreApp/ShowMoreRecyclerViewAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_search_grey_18dp.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_002_qr_code.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_001_qr_code_1.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_home.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/StartSnapHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_app_small.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_app.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/common/model/SourceBean.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/showMoreApp/ShowMoreActicity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/showMoreApp/ShowMoreViewPagerAdapter.java" />
@@ -3349,8 +3355,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/main/HomeActPresenter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomeListAppAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/detail/DetailContact.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/detail/DetailActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/detail/DetailPresenter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/apkManage/ApkFragment.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/circle_notification.xml" />
@@ -3370,6 +3374,14 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/act_detail_new.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomePresenter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/detail/DetailPresenter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/detail/DetailActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/tag_04.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/seemore.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/tag_02.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_app.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomeViewPagerAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
       </list>
     </option>
@@ -3466,32 +3478,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="screen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lenam_app_new_version" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mvpbase" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="screen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -3637,7 +3623,7 @@
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="PROGUARD" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/hung/Documents/GitHub/lenam_app/app/src/main/java/com/paditech/mvpbase/screen/home/HomeListAppAdapter.java" />
-    <property name="VectorAssetImportPath" value="C:\Users\hung\Downloads\my-icons-collection (1)\svg" />
+    <property name="VectorAssetImportPath" value="C:\Users\hung\Downloads\my-icons-collection (1)" />
     <property name="ExportApk.ApkPath" value="C:\Users\hung\Desktop" />
     <property name="ExportApk.Flavors" value="envReal" />
     <property name="ExportApk.BuildType" value="release" />
@@ -3746,7 +3732,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524187869456" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524195704666" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -3794,7 +3780,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524187869456" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524195704667" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3977,7 +3963,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524187869458" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524195704669" />
       </method>
     </configuration>
     <list size="1">
@@ -4051,7 +4037,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.79575163" sideWeight="0.49092284" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5424837" sideWeight="0.4969743" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32026145" sideWeight="0.6921331" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7761438" sideWeight="0.6921331" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.47549018" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
@@ -4111,81 +4097,11 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="256" />
+      <option name="time" value="257" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomeContact.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="46" column="62" lean-forward="false" selection-start-line="46" selection-start-column="62" selection-end-line="46" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-27/android.jar!/android/view/View.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="310" column="16" lean-forward="false" selection-start-line="310" selection-start-column="16" selection-end-line="310" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/common/model/AppModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="151" column="36" lean-forward="false" selection-start-line="151" selection-start-column="36" selection-end-line="151" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/detail/DetailViewPagerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomeViewPagerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="68" column="15" lean-forward="true" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/main/MainContact.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/main/MainPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/main/HomeActContact.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="53" lean-forward="false" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-27/android.jar!/java/lang/CharSequence.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -4204,13 +4120,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="15" column="73" lean-forward="false" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/detail/DetailPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="62" column="17" lean-forward="false" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -4432,14 +4341,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="82" column="31" lean-forward="false" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/common/model/Cate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -4464,30 +4365,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/tag.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/act_detail_new.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="226" column="0" lean-forward="true" selection-start-line="226" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
+        <state relative-caret-position="278">
+          <caret line="135" column="36" lean-forward="true" selection-start-line="135" selection-start-column="36" selection-end-line="135" selection-end-column="36" />
           <folding>
-            <element signature="e#1483#1504#0" expanded="true" />
-            <element signature="e#1550#1571#0" expanded="true" />
             <element signature="e#2077#2408#0" expanded="false" />
-            <element signature="e#2834#2856#0" expanded="true" />
-            <element signature="e#3246#3268#0" expanded="true" />
             <element signature="e#3316#4210#0" expanded="false" />
             <element signature="e#4232#4725#0" expanded="false" />
             <element signature="e#4747#5308#0" expanded="false" />
-            <element signature="e#5106#5124#0" expanded="true" />
             <element signature="e#5330#5816#0" expanded="false" />
             <element signature="e#5838#6419#0" expanded="false" />
-            <element signature="e#6441#7200#0" expanded="false" />
             <element signature="e#7275#7591#0" expanded="false" />
             <element signature="e#7605#8157#0" expanded="false" />
-            <element signature="e#7835#7855#0" expanded="true" />
-            <element signature="e#7955#7975#0" expanded="true" />
             <element signature="e#8171#8621#0" expanded="false" />
             <element signature="e#8635#8895#0" expanded="false" />
             <element signature="e#8909#10176#0" expanded="false" />
@@ -4503,17 +4401,141 @@
             <element signature="e#15376#15826#0" expanded="false" />
             <element signature="e#15840#16028#0" expanded="false" />
             <element signature="e#16124#17032#0" expanded="false" />
-            <element signature="e#17112#17135#0" expanded="true" />
-            <element signature="e#17166#17189#0" expanded="true" />
-            <element signature="e#17214#17235#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/detail/DetailPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="59" column="52" lean-forward="false" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="52" />
+          <folding>
+            <element signature="class#731:1342" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/detail/DetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="638" column="0" lean-forward="true" selection-start-line="638" selection-start-column="0" selection-end-line="638" selection-end-column="0" />
+          <folding>
+            <element signature="e#6213#6214#0" expanded="false" />
+            <element signature="e#6259#6260#0" expanded="false" />
+            <element signature="e#9481#9861#0" expanded="false" />
+            <element signature="e#9860#9861#0" expanded="false" />
+            <element signature="class#9958:10958" expanded="false" />
+            <element signature="method#downloadApkFile#0;class#DetailActivity#0" expanded="false" />
+            <element signature="method#setUpViewpager#0;class#DetailActivity#0" expanded="false" />
+            <element signature="method#linesCount#0;class#DetailActivity#0" expanded="false" />
+            <element signature="method#getRelateData#0;class#DetailActivity#0" expanded="false" />
+            <element signature="method#getAppHistory#0;class#DetailActivity#0" expanded="false" />
+            <element signature="method#prepareData#0;class#DetailActivity#0" expanded="false" />
+            <element signature="method#lineChartData#0;class#DetailActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/tag_04.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/seemore.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/asdasd.webp">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/tag_02.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_app_download.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/cardview-v7/27.0.2/b3894bbe2da65c0251f40863fe415151f1a4bc89/cardview-v7-27.0.2-sources.jar!/android/support/v7/widget/CardView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="76" column="13" lean-forward="false" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="47" column="17" lean-forward="false" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_app.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="e#490#508#0" expanded="true" />
+            <element signature="e#540#558#0" expanded="true" />
+            <element signature="e#1141#1162#0" expanded="true" />
+            <element signature="e#1378#1399#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="254" column="46" lean-forward="false" selection-start-line="254" selection-start-column="46" selection-end-line="254" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomeViewPagerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="74" column="26" lean-forward="false" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomePresenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="43" column="171" lean-forward="false" selection-start-line="43" selection-start-column="171" selection-end-line="43" selection-end-column="171" />
+        <state relative-caret-position="323">
+          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
           <folding>
             <element signature="class#642:1242" expanded="false" />
             <element signature="class#1404:2004" expanded="false" />
@@ -4523,33 +4545,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/detail/DetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="175" column="34" lean-forward="false" selection-start-line="175" selection-start-column="34" selection-end-line="175" selection-end-column="34" />
-          <folding>
-            <element signature="e#6213#6214#0" expanded="true" />
-            <element signature="e#6259#6260#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/paditech/mvpbase/screen/home/HomeFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="107" column="31" lean-forward="false" selection-start-line="107" selection-start-column="31" selection-end-line="107" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="27" column="47" lean-forward="true" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
-          <folding />
+        <state relative-caret-position="337">
+          <caret line="143" column="64" lean-forward="false" selection-start-line="143" selection-start-column="64" selection-end-line="143" selection-end-column="64" />
+          <folding>
+            <element signature="e#518#788#0" expanded="false" />
+            <element signature="e#798#2936#0" expanded="false" />
+            <element signature="e#1015#1511#0" expanded="false" />
+            <element signature="e#1359#1380#0" expanded="true" />
+            <element signature="e#1423#1444#0" expanded="true" />
+            <element signature="e#1488#1509#0" expanded="true" />
+            <element signature="e#1524#2020#0" expanded="false" />
+            <element signature="e#1868#1889#0" expanded="true" />
+            <element signature="e#1932#1953#0" expanded="true" />
+            <element signature="e#1997#2018#0" expanded="true" />
+            <element signature="e#2033#2529#0" expanded="false" />
+            <element signature="e#2377#2398#0" expanded="true" />
+            <element signature="e#2441#2462#0" expanded="true" />
+            <element signature="e#2506#2527#0" expanded="true" />
+            <element signature="e#2752#2773#0" expanded="true" />
+            <element signature="e#2945#3985#0" expanded="false" />
+            <element signature="e#3117#3528#0" expanded="false" />
+            <element signature="e#3316#3337#0" expanded="true" />
+            <element signature="e#3414#3436#0" expanded="true" />
+            <element signature="e#3855#3876#0" expanded="true" />
+            <element signature="e#3994#4271#0" expanded="false" />
+            <element signature="e#4281#4561#0" expanded="false" />
+            <element signature="e#4369#4387#0" expanded="true" />
+            <element signature="e#4479#4500#0" expanded="true" />
+            <element signature="e#4538#4559#0" expanded="true" />
+            <element signature="e#4572#4917#0" expanded="false" />
+            <element signature="e#4760#4781#0" expanded="true" />
+            <element signature="e#4811#4833#0" expanded="true" />
+            <element signature="e#5225#5247#0" expanded="true" />
+            <element signature="e#5278#5695#0" expanded="false" />
+            <element signature="e#5537#5558#0" expanded="true" />
+            <element signature="e#5950#5971#0" expanded="true" />
+            <element signature="e#6395#6738#0" expanded="false" />
+            <element signature="e#6581#6602#0" expanded="true" />
+            <element signature="e#6632#6654#0" expanded="true" />
+            <element signature="e#6990#7137#0" expanded="false" />
+            <element signature="e#7330#7351#0" expanded="true" />
+            <element signature="e#7381#7403#0" expanded="true" />
+            <element signature="e#8056#8853#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

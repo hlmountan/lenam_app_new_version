@@ -40,27 +40,27 @@ public class DetailPresenter extends ActivityPresenter<DetailContact.ViewOps> im
             }
         });
 
-//        if (isHistory == 1 ){
-//            APIClient.getInstance().execGet("https://appsxyz.com/api/apk/price_history/?appid="+ appid, null, new ICallBack() {
-//                @Override
-//                public void onErrorToken() {
-//
-//                }
-//
-//                @Override
-//                public void onFailed(IOException e) {
-//
-//                }
-//
-//                @Override
-//                public void onResponse(String response, boolean isSuccessful) {
-//                    // do something here
-//                    final AppPriceHistory appPriceHistory = new Gson().fromJson(response, AppPriceHistory.class);
-//                    if (appPriceHistory != null) {
-//                        getView().setAppPriceHistory(appPriceHistory.getPriceHistory());
-//                    }
-//                }
-//            });
-//        }
+        if (isHistory == 1 ){
+            APIClient.getInstance().execGet("https://appsxyz.com/api/apk/price_history/?appid="+ appid, null, new ICallBack() {
+                @Override
+                public void onErrorToken() {
+
+                }
+
+                @Override
+                public void onFailed(IOException e) {
+
+                }
+
+                @Override
+                public void onResponse(String response, boolean isSuccessful) {
+                    // do something here
+                    final AppPriceHistory appPriceHistory = new Gson().fromJson(response, AppPriceHistory.class);
+                    if (appPriceHistory != null) {
+                        getView().setAppPriceHistory(appPriceHistory.getPriceHistory());
+                    }
+                }
+            });
+        }
     }
 }

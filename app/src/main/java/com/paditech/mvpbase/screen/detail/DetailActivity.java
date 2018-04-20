@@ -633,6 +633,9 @@ public class DetailActivity extends MVPActivity<DetailContact.PresenterViewOps> 
                         setUpViewpager(app.getScreenShot());
                         System.out.println(app.getScreenShot());
                     }
+//                    if(isHistory ==1){
+//                        view_page_screenshot.setVisibility(View.GONE);
+//                    }
 
 
                     //set title for download api

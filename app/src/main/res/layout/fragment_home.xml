@@ -18,27 +18,52 @@
             android:layout_height="100dp"
             android:background="@drawable/border_gray_ligh_background"></android.support.v4.view.ViewPager>
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:background="@drawable/tag" />
+                android:background="@drawable/tag_02"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_marginRight="@dimen/margin_large"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:background="@drawable/installbutton" />
-
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/tag_02"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_marginRight="@dimen/margin_large"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:background="@drawable/installbutton" />
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/tag_02"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_marginRight="@dimen/margin_large"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="@dimen/margin_small"
+                android:background="@drawable/seemore"
+                android:minHeight="0dp"
+                android:minWidth="0dp" />
 
-        </RelativeLayout>
+
+        </LinearLayout>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,58 +72,79 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
                 android:text=" Recentely App"
-                android:layout_marginLeft="@dimen/margin_small"/>
+                android:layout_margin="@dimen/margin_small"
+                android:id="@+id/textView"
+                android:textSize="@dimen/text_size_big"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
 
             <Button
                 android:id="@+id/btn_see_more"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:background="@drawable/ic_select" />
+                android:background="@drawable/seemore"
+                android:layout_marginRight="@dimen/margin_small"
+                android:minWidth="0dp"
+                android:minHeight="0dp"/>
+
+
         </RelativeLayout>
-
-
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view_recentely"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"></android.support.v7.widget.RecyclerView>
 
-
         <View
             android:layout_width="match_parent"
-            android:layout_height="8dp"
-            android:background="@color/gray_light" />
+            android:layout_height="@dimen/line_size"
+            android:background="@color/gray_light"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"/>
 
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Top Adventure Game"
+            android:layout_margin="@dimen/margin_small"
+            android:textSize="@dimen/text_size_big"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:background="@drawable/vp2">
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/textView"
+            android:background="@drawable/batle"
+            android:paddingBottom="@dimen/padding_small"
+            >
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_small"
-                android:layout_marginTop="@dimen/margin_small"
-                android:layout_marginLeft="@dimen/margin_small"
-                android:text=" App On Sale" />
 
-            <TextClock
+
+
+            <Button
+                android:id="@+id/btn_see_more1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="@dimen/margin_default"
-                android:text="10:09:59" />
+                android:layout_marginRight="@dimen/margin_small"
+                android:background="@drawable/seemore"
+                android:minHeight="0dp"
+                android:minWidth="0dp" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_on_sale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/transparent"
+                android:paddingBottom="@dimen/padding_super_tiny"></android.support.v7.widget.RecyclerView>
         </RelativeLayout>
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_view_on_sale"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
 
         <View
             android:layout_width="match_parent"
@@ -107,11 +153,13 @@
 
 
         <TextView
+            android:text=" Top Grossing App"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_small"
-            android:text=" Top Grossing App"
-            android:layout_marginLeft="@dimen/margin_small"/>
+            android:textSize="@dimen/text_size_big"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view_grossing"
@@ -125,10 +173,13 @@
             android:background="@color/gray_light" />
 
         <TextView
+            android:text=" Top Gone Free"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_small"
-            android:text=" Top Grossing App" />
+            android:textSize="@dimen/text_size_big"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view_top_download"
@@ -139,32 +190,6 @@
             android:layout_width="match_parent"
             android:layout_height="8dp"
             android:background="@color/gray_light" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_small"
-            android:text=" Top Grossing App" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="100dp"></View>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="8dp"
-            android:background="@color/gray_light" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_small"
-            android:text=" Top Grossing App" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="100dp"></View>
-
 
         <View
             android:layout_width="match_parent"
